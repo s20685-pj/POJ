@@ -1,0 +1,62 @@
+// Wskaźnik BMI
+
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Podaj Wage Ciała");
+        int x = input.nextInt();
+        System.out.println("Podaj Wzrost");
+        int y = input.nextInt();
+
+        int q = y*y/10000;
+        int n = x/q;
+        System.out.println("Twój wskaźnik BMI to: " + n);
+            if ( n < 16 )
+            {
+                System.out.println("Jesteś Wygłodzony");
+                return;
+            }
+            if (16.99 > n )
+            {
+                System.out.println("Jesteś Wychudzony");
+                return;
+            }
+            if ( 18.5>n)
+            {
+                System.out.println("Masz Niedowage");
+                return;
+            }
+            if (25 > n)
+            {
+                System.out.println("Masz Pożądaną wage ciała");
+                return;
+            }
+            if (30.0 > n)
+            {
+            System.out.println("Masz nadwage");
+            return;
+            }
+             if (35 > n)
+            {
+                System.out.println("Masz Otyłość Pierwszego Stopnia");
+                return;
+            }
+             if( 40 > n)
+        {
+            System.out.println("Masz Otyłość Drugiego Stopnia");
+            return;
+        }
+        if (n>40)
+        {
+            System.out.println("Masz Otyłość Trzecieo Stopnia");
+            return;
+        }
+        }
+        }
+        
+       // Benedykt Borowski s20685
