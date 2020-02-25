@@ -1,0 +1,31 @@
+/*Zapotrzebowanie na kalorie
+Benedykt Borowski s20685*/
+
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Jaką masz płeć?(F/M):");
+        String male  = scanner.nextLine();
+        System.out.println("Podaj wagę:");
+        int weight = scanner.nextInt();
+        System.out.println("Podaj wzrost:");
+        int height = scanner.nextInt();
+        System.out.println("Podaj wiek:");
+        int age = scanner.nextInt();
+
+        double Kalorie = 0;
+
+        if(male.equals("F")){
+            Kalorie = 655.1 + (1.85*height) + (9.563*weight) - (4.676*age);
+            System.out.println(Kalorie);
+        }
+        else if (male.equals("M")){
+            Kalorie = 66.5 + (5.003*height) + (13.75*weight) - (6.775*age);
+            System.out.println(Kalorie);
+        }
+
+    }
+}
