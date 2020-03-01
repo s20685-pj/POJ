@@ -1,0 +1,45 @@
+//Piramida z liter
+//Benedykt Borowski
+
+
+import java.util.Scanner;
+
+public class Piramida {
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Wprowadź rozmiar Piramidy: ");
+        int size = in.nextInt();
+
+        int oddNumber = 1;
+        int numberOfSpaces = size - 1;
+
+        for (int i = 1; i <= size; i++) {
+
+            char litera = '`';
+            for (int j = 1; j <= numberOfSpaces; j++) {
+                System.out.print(" ");
+            }
+
+
+            for (int j = 1; j <= oddNumber; j++) {
+
+
+                if (j <= i)
+                {
+                    litera++;
+                } else
+                {
+                    litera--;
+                }
+
+                System.out.print(litera);
+            }
+            System.out.println();
+            oddNumber += 2;
+            numberOfSpaces--;
+        }
+
+    }
+}
